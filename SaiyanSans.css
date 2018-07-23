@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'SaiyanSans';
+    src: url('fonts/SaiyanSans.eot');
+    src: url('fonts/SaiyanSans.eot') format('embedded-opentype'),
+         url('fonts/SaiyanSans.woff2') format('woff2'),
+         url('fonts/SaiyanSans.woff') format('woff'),
+         url('fonts/SaiyanSans.ttf') format('truetype'),
+         url('fonts/SaiyanSans.svg#SaiyanSans') format('svg');
+}
+
+
+h1 {
+    font-family: "SaiyanSans",sans-serif;
+    font-size: 80px;
+    color: #FFDE13;
+    
+}
+
+.word {
+    color: #C9071F;
+}
+
+.character {
+    color: #E7991C;
+}
