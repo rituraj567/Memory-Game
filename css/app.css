@@ -37,7 +37,6 @@ h1 {
   font-size: 90px !important;
 }
 
-
 .display {
   display: block;
 }
@@ -48,14 +47,16 @@ h1 {
 
 button {
   background: #ffde13;
-  border:none;
+  border: none;
   padding: 0.3em 0.7em;
   cursor: pointer;
-  outline:none;
+  outline: none;
 }
 
-button:focus, button:active {outline:0 !important;}
-
+button:focus,
+button:active {
+  outline: 0 !important;
+}
 
 .selected {
   color: #fff;
@@ -66,7 +67,6 @@ button:focus, button:active {outline:0 !important;}
 /*
    * Styles for the music player
    */
-
 
 .seekbar {
   background: grey;
@@ -147,7 +147,6 @@ div.length input[type="range"] {
   outline: 0;
 }
 
-
 .easy {
   height: 31em !important;
   width: 31em !important;
@@ -162,8 +161,6 @@ div.length input[type="range"] {
   height: 46em !important;
   width: 46em !important;
 }
-
-
 
 /*
    * Styles for the deck of cards
@@ -194,14 +191,12 @@ div.length input[type="range"] {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .card {
   height: 8rem;
   width: 8rem;
 }
-
 
 .deck .card.open {
   transform: rotateY(0);
@@ -291,12 +286,11 @@ div.length input[type="range"] {
   opacity: 1 !important;
 }
 
-
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 .modal {
@@ -327,21 +321,21 @@ tr {
 .header {
   background: linear-gradient(to top, #232526, #414345);
   border: 0 !important;
-  border-color: none;;
+  border-color: none;
 }
 
 .trophy {
   font-size: 22px !important;
-  color: #F45C43;
+  color: #f45c43;
 }
 
 .table-borderless td,
 .table-borderless th {
- border: 0 !important;
+  border: 0 !important;
 }
 
 tr {
-  border-bottom: 1px solid #F45C43 !important;
+  border-bottom: 1px solid #f45c43 !important;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -349,40 +343,43 @@ tr {
   -o-transition: all 0.3s ease;
 }
 
-
-
 tr:last-child {
   border-bottom: 0 !important;
 }
 
 .table-body {
-  background: #EB3349;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #eb3349; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #f45c43,
+    #eb3349
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f45c43,
+    #eb3349
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  color:#fff;
+  color: #fff;
   padding: 0 !important;
-  
 }
-
-
 
 .modal-center {
   position: relative;
-  top:5em;
+  top: 5em;
 }
 /*-----MEDIA QUERIES------*/
 
-@media only screen and (max-width: 980px) { 
-
+@media only screen and (max-width: 980px) {
   .deck {
     height: 30em;
     width: 32em;
     min-height: 33em;
     padding: 0.8em;
   }
- 
-  .card, .img-card {
+
+  .card,
+  .img-card {
     height: 6.8rem;
     width: 6.8rem;
   }
@@ -391,34 +388,33 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     height: 24em !important;
     width: 26em !important;
   }
-  
+
   .medium {
     height: 30em !important;
     width: 32em !important;
   }
-  
+
   .hard {
     height: 36em !important;
     width: 38em !important;
   }
 
-  
   .col-sm-4,
   .col,
   .deck {
     overflow-x: hidden;
   }
-  
- }
+}
 
- @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .deck {
     height: 27em;
     width: 29em;
     min-height: 37em;
   }
- 
-  .card, .img-card {
+
+  .card,
+  .img-card {
     height: 6.2rem;
     width: 6.2rem;
   }
@@ -427,54 +423,53 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     height: 19em !important;
     width: 22em !important;
   }
-  
+
   .medium {
     height: 27em !important;
     width: 29em !important;
   }
-  
+
   .hard {
     height: 30em !important;
     width: 32em !important;
   }
 
- .choices {
-   justify-content: center !important;
-   margin-top : 1em;
- }
+  .choices {
+    justify-content: center !important;
+    margin-top: 1em;
+  }
 
- .player {
-   position: relative;
-   left: 9em;
-   margin-top: 1em;
- }
+  .player {
+    position: relative;
+    left: 9em;
+    margin-top: 1em;
+  }
 
- .songTitle {
-   left: 5em;
- }
+  .songTitle {
+    left: 5em;
+  }
 
- .seekbar {
-  left: 6em;
- }
+  .seekbar {
+    left: 6em;
+  }
+}
 
- }
-
- @media only screen and (max-width: 648px) {
+@media only screen and (max-width: 648px) {
   .deck {
     height: 25em;
     width: 27em;
     padding: 0.8em;
     min-height: 35em;
   }
- 
-  .card, .img-card {
+
+  .card,
+  .img-card {
     height: 6rem;
     width: 6rem;
-   
   }
-  
+
   .leader-header {
-   left:5em;
+    left: 5em;
   }
   .easy {
     height: 17em !important;
@@ -484,31 +479,29 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     height: 25em !important;
     width: 27em !important;
   }
-  
+
   .hard {
     height: 29em !important;
     width: 30em !important;
   }
+}
 
- }
-
- @media only screen and (max-width: 618px) {
+@media only screen and (max-width: 618px) {
   .deck {
     height: 22em;
     width: 25em;
     min-height: 33em;
   }
- 
+
   h1 {
     font-size: 4.5em !important;
   }
-  .card, .img-card {
+  .card,
+  .img-card {
     height: 5.5rem;
     width: 5.5rem;
-   
   }
 
- 
   .easy {
     height: 14em !important;
     padding: 1.2em;
@@ -518,19 +511,18 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     height: 22em !important;
     width: 25em !important;
   }
-  
+
   .hard {
     height: 26em !important;
     width: 28em !important;
   }
+}
 
- }
-
- @media only screen and (max-width: 589px){
-  .card, .img-card {
+@media only screen and (max-width: 589px) {
+  .card,
+  .img-card {
     height: 5.2rem;
     width: 5.2rem;
-   
   }
 
   .deck {
@@ -548,18 +540,18 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
   .medium {
     height: 20em !important;
     width: 23em !important;
-    padding: 0.5em
+    padding: 0.5em;
   }
-  
+
   .hard {
     height: 23em !important;
     width: 26em !important;
   }
+}
 
- }
- 
- @media only screen and (max-width: 528px) {
-  .card, .img-card {
+@media only screen and (max-width: 528px) {
+  .card,
+  .img-card {
     height: 5rem;
     width: 5rem;
     padding: 0.5em;
@@ -569,8 +561,7 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
   .deck {
     height: 16em;
     width: 23em;
-    padding: 0.5em
-
+    padding: 0.5em;
   }
 
   .leader-header {
@@ -587,15 +578,16 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     width: 23em !important;
     padding: 0.5em;
   }
-  
+
   .hard {
     height: 18em !important;
     width: 22em !important;
   }
- }
+}
 
- @media only screen and (max-width: 468px){
-  .card, .img-card {
+@media only screen and (max-width: 468px) {
+  .card,
+  .img-card {
     height: 4.3rem;
     width: 4.3rem;
     padding: 0.5em;
@@ -607,26 +599,28 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     min-height: 26em;
   }
 
- h1 {
-   font-size: 4em !important;
- }
+  h1 {
+    font-size: 4em !important;
+  }
+  
   .easy {
     height: 19em !important;
     width: 17em !important;
   }
-  
+
   .medium {
     width: 20em !important;
   }
-  
+
   .hard {
     height: 18em !important;
     width: 20em !important;
   }
- }
+}
 
-@media only screen and (max-width: 412px){
-  .card, .img-card {
+@media only screen and (max-width: 412px) {
+  .card,
+  .img-card {
     height: 3.8rem;
     width: 3.8rem;
     padding: 0.5em;
@@ -642,32 +636,31 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
     left: 2em;
   }
 
- h1 {
-   font-size: 3.3em !important;
- }
+  h1 {
+    font-size: 3.3em !important;
+  }
   .easy {
     height: 19em !important;
     width: 15em !important;
   }
-  
+
   .medium {
     width: 18em !important;
   }
-  
+
   .hard {
     height: 18em !important;
     width: 18em !important;
- 
   }
 
   button {
     padding: 0.2em 0.5em;
   }
-
 }
 
-@media only screen and (max-width: 368px){
-  .card, .img-card {
+@media only screen and (max-width: 368px) {
+  .card,
+  .img-card {
     height: 3.6rem;
     width: 3.6rem;
     padding: 0.5em;
@@ -682,22 +675,22 @@ background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, 
   .leader-header {
     left: 1em;
   }
- h1 {
-   font-size: 3.1em !important;
- }
+
+  h1 {
+    font-size: 3.1em !important;
+  }
+
   .easy {
     height: 19em !important;
     width: 13em !important;
   }
-  
+
   .medium {
     width: 16em !important;
   }
-  
+
   .hard {
     height: 18em !important;
     width: 17em !important;
- 
   }
-
 }

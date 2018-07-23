@@ -1,4 +1,4 @@
-//Database 
+//Database
 var database;
 
 function shuffle(array) {
@@ -133,7 +133,6 @@ function prev() {
   sliderUpdate();
 }
 
-
 //Play Or Pause Song
 function playOrPauseSong() {
   if (song.paused) {
@@ -189,7 +188,7 @@ $('input[type="range"]').on("input", function() {
    */
 // Shuffle function from http://stackoverflow.com/a/2450976
 
-// shuffle(images);
+shuffle(images);
 let cardContainer = document.querySelector(".deck");
 
 let openCards = [];
@@ -197,106 +196,100 @@ let matchedCards = [];
 //Create Cards
 function init() {
   setUpModeButtons();
-  for (let i = 0; i <images.length; i++) {
-      const card = document.createElement("li");
-      card.classList.add("card");
-      card.innerHTML = `<img src="${images[i]}" alt="image-${i +
-        1}"" class="img-card">`;
-      cardContainer.appendChild(card);
-      $("img").addClass("remove");
-      //Card click even
-     click(card);
-}
-
+  for (let i = 0; i < images.length; i++) {
+    const card = document.createElement("li");
+    card.classList.add("card");
+    card.innerHTML = `<img src="${images[i]}" alt="image-${i +
+      1}"" class="img-card">`;
+    cardContainer.appendChild(card);
+    $("img").addClass("remove");
+    //Card click even
+    click(card);
+  }
 }
 
 let modeButtons = document.querySelectorAll(".mode");
 
-function setUpModeButtons(){
-	for(let i = 0; i < modeButtons.length; i++){
-		modeButtons[i].addEventListener("click",function(){
-		modeButtons[0].classList.remove("selected");
-    modeButtons[1].classList.remove("selected");
-    modeButtons[2].classList.remove("selected");
-		this.classList.add("selected");
-		if(this.textContent == "Easy"){
-      images = [
-        "./img/image-1.png",
-        "./img/image-1.png",
-        "./img/image-2.png",
-        "./img/image-2.png",
-        "./img/image-3.png",
-        "./img/image-3.png",
-        "./img/image-4.png",
-        "./img/image-4.png",
-        "./img/image-5.png",
-        "./img/image-5.png",
-        "./img/image-6.png",
-        "./img/image-6.png",
-      ];
-     
-      $(cardContainer).removeClass("medium");
-      $(cardContainer).removeClass("hard");
-      $(cardContainer).addClass("easy");
-    
-    }
+function setUpModeButtons() {
+  for (let i = 0; i < modeButtons.length; i++) {
+    modeButtons[i].addEventListener("click", function() {
+      modeButtons[0].classList.remove("selected");
+      modeButtons[1].classList.remove("selected");
+      modeButtons[2].classList.remove("selected");
+      this.classList.add("selected");
+      if (this.textContent == "Easy") {
+        images = [
+          "./img/image-1.png",
+          "./img/image-1.png",
+          "./img/image-2.png",
+          "./img/image-2.png",
+          "./img/image-3.png",
+          "./img/image-3.png",
+          "./img/image-4.png",
+          "./img/image-4.png",
+          "./img/image-5.png",
+          "./img/image-5.png",
+          "./img/image-6.png",
+          "./img/image-6.png"
+        ];
 
-    else if(this.textContent == "Medium"){
-      images = [
-        "./img/image-1.png",
-        "./img/image-1.png",
-        "./img/image-2.png",
-        "./img/image-2.png",
-        "./img/image-3.png",
-        "./img/image-3.png",
-        "./img/image-4.png",
-        "./img/image-4.png",
-        "./img/image-5.png",
-        "./img/image-5.png",
-        "./img/image-6.png",
-        "./img/image-6.png",
-        "./img/image-7.png",
-        "./img/image-7.png",
-        "./img/image-8.png",
-        "./img/image-8.png"
-      ];
-      
-      $(cardContainer).removeClass("easy");
-      $(cardContainer).removeClass("hard");
-      $(cardContainer).addClass("medium");
-    }
+        $(cardContainer).removeClass("medium");
+        $(cardContainer).removeClass("hard");
+        $(cardContainer).addClass("easy");
+      } else if (this.textContent == "Medium") {
+        images = [
+          "./img/image-1.png",
+          "./img/image-1.png",
+          "./img/image-2.png",
+          "./img/image-2.png",
+          "./img/image-3.png",
+          "./img/image-3.png",
+          "./img/image-4.png",
+          "./img/image-4.png",
+          "./img/image-5.png",
+          "./img/image-5.png",
+          "./img/image-6.png",
+          "./img/image-6.png",
+          "./img/image-7.png",
+          "./img/image-7.png",
+          "./img/image-8.png",
+          "./img/image-8.png"
+        ];
 
-    else  {
-      images = [
-        "./img/image-1.png",
-        "./img/image-1.png",
-        "./img/image-2.png",
-        "./img/image-2.png",
-        "./img/image-3.png",
-        "./img/image-3.png",
-        "./img/image-4.png",
-        "./img/image-4.png",
-        "./img/image-5.png",
-        "./img/image-5.png",
-        "./img/image-6.png",
-        "./img/image-6.png",
-        "./img/image-7.png",
-        "./img/image-7.png",
-        "./img/image-8.png",
-        "./img/image-8.png",
-        "./img/image-9.png",
-        "./img/image-9.png",
-        "./img/image-10.png",
-        "./img/image-10.png"
-      ];
-       
-      $(cardContainer).removeClass("medium");
-      $(cardContainer).removeClass("easy");
-      $(cardContainer).addClass("hard");
-    }
-	   restartGame()
-		});
-	}
+        $(cardContainer).removeClass("easy");
+        $(cardContainer).removeClass("hard");
+        $(cardContainer).addClass("medium");
+      } else {
+        images = [
+          "./img/image-1.png",
+          "./img/image-1.png",
+          "./img/image-2.png",
+          "./img/image-2.png",
+          "./img/image-3.png",
+          "./img/image-3.png",
+          "./img/image-4.png",
+          "./img/image-4.png",
+          "./img/image-5.png",
+          "./img/image-5.png",
+          "./img/image-6.png",
+          "./img/image-6.png",
+          "./img/image-7.png",
+          "./img/image-7.png",
+          "./img/image-8.png",
+          "./img/image-8.png",
+          "./img/image-9.png",
+          "./img/image-9.png",
+          "./img/image-10.png",
+          "./img/image-10.png"
+        ];
+
+        $(cardContainer).removeClass("medium");
+        $(cardContainer).removeClass("easy");
+        $(cardContainer).addClass("hard");
+      }
+      restartGame();
+    });
+  }
 }
 
 /*
@@ -310,7 +303,6 @@ function setUpModeButtons(){
    *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
    */
 
- 
 //Click Cards
 let timer = new Timer();
 let checkTime = false;
@@ -379,7 +371,6 @@ function compare(currentImage, previousImage) {
   addMove();
 }
 
-
 function restartGame() {
   //Delete all cards
   timer.innerHTML = "00:00:00";
@@ -387,7 +378,7 @@ function restartGame() {
   //Call init funtion
   shuffle(images);
   init();
-  
+
   //Reset variables
 
   matchedCards = [];
@@ -399,7 +390,7 @@ function restartGame() {
   starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
 <li><i class="fa fa-star"></i></li>
 <li><i class="fa fa-star"></i></li>`;
- modal.innerHTML = "";
+  modal.innerHTML = "";
 }
 
 //Timer
@@ -423,19 +414,19 @@ function restartTimer() {
 }
 
 //Leader Board
-const leaderboard = document.querySelector(".board")
+const leaderboard = document.querySelector(".board");
 
+$(".leaderboard").on("click", function() {
+  $(".modal").css(
+    "background-image",
+    "linear-gradient(to left, #eb3349, #f45c43)"
+  );
+  $(".modal").modal("show");
 
-$(".leaderboard").on("click",function(){
-
-
-$(".modal").css("background-image","linear-gradient(to left, #eb3349, #f45c43)");
-$(".modal").modal("show");
-
-$(document).on("hidden.bs.modal", ".modal", function() {
-  $(".modal").modal("hide");
-  $(".modal").css("display", "none");
-});
+  $(document).on("hidden.bs.modal", ".modal", function() {
+    $(".modal").modal("hide");
+    $(".modal").css("display", "none");
+  });
 });
 
 // Game Over
@@ -460,10 +451,10 @@ ${timer.getTimeValues().seconds} secs
 </p>
 <p class="add-name">Add your name in the leaderboard 🏆 </p>
 <form class="form-inline">
-  <div class="form-group mb-2 mx-3">
-    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-  </div>
-  <button type="submit" class="btn btn-success submit mb-2">Submit</button>
+<div class="form-group mb-2 mx-3">
+<input type="text" class="form-control" id="name" placeholder="Enter your name">
+</div>
+<button type="submit" class="btn btn-success submit mb-2">Submit</button>
 </form>
 </div>
 <div class="modal-footer">
@@ -475,13 +466,15 @@ ${timer.getTimeValues().seconds} secs
 </div>`;
     $(".board .modal").modal("hide");
     $(".modal-box .modal").modal("show");
-   
+
     const submitButton = document.querySelector(".submit");
-    submitButton.addEventListener("click",function(e){
-      $(".form-inline").css("display","none");
+    submitButton.addEventListener("click", function(e) {
+      $(".form-inline").css("display", "none");
       e.preventDefault();
       $(".add-name").addClass("animated fadeIn");
-      $(".add-name").text("Thank you for giving your name ✔️, now you can close this or play again to improve your score.");
+      $(".add-name").text(
+        "Thank you for giving your name ✔️, now you can close this or play again to improve your score."
+      );
       submitScores();
     });
 
@@ -500,15 +493,20 @@ ${timer.getTimeValues().seconds} secs
 
 //Submit scores
 
-function submitScores(){
-  let name = document.getElementById('name').value;
-  let time = `${timer.getTimeValues().hours} hrs ${timer.getTimeValues().minutes} mins ${timer.getTimeValues().seconds} secs`;
-  if (timer.getTimeValues().seconds <= 60 && timer.getTimeValues().minutes < 1){
+function submitScores() {
+  let name = document.getElementById("name").value;
+  let time = `${timer.getTimeValues().hours} hrs ${
+  timer.getTimeValues().minutes
+  } mins ${timer.getTimeValues().seconds} secs`;
+  if (
+    timer.getTimeValues().seconds <= 60 &&
+    timer.getTimeValues().minutes < 1
+  ) {
     time = `${timer.getTimeValues().seconds} sec(s)`;
-  }
-
-  else if(timer.getTimeValues().minutes <=60){
-    time = `${timer.getTimeValues().minutes} min(s) ${timer.getTimeValues().seconds} sec(s)`;
+  } else if (timer.getTimeValues().minutes <= 60) {
+    time = `${timer.getTimeValues().minutes} min(s) ${
+    timer.getTimeValues().seconds
+  } sec(s)`;
   }
 
   var data = {
@@ -517,13 +515,11 @@ function submitScores(){
     medal: medal,
     time: time
   };
-  
 
   console.log(data);
   database = firebase.database();
-  var ref = database.ref('leaderboard');
+  var ref = database.ref("leaderboard");
   ref.push(data);
-
 }
 //Restart Game
 const restart = $(".restart");
@@ -577,15 +573,15 @@ firebase.initializeApp(config);
 database = firebase.database();
 
 var ref = database.ref("leaderboard");
-ref.on("value",gotData,errData);
+ref.on("value", gotData, errData);
 
-function gotData(data){
+function gotData(data) {
   let scores = data.val();
- let  keys = Object.keys(scores);
- let name, points, medal, time;
+  let keys = Object.keys(scores);
+  let name, points, medal, time;
   console.log(keys);
   const table = document.querySelector(".table");
-  for(let i = 0; i < keys.length; i++){
+  for (let i = 0; i < keys.length; i++) {
     let k = keys[i];
 
     console.log(keys.length);
@@ -593,15 +589,14 @@ function gotData(data){
     points = scores[k].points;
     medal = scores[k].medal;
     time = scores[k].time;
-    console.log(name,points,medal,time);
-    $(table).append(`<tr><td>${name}</td><td>${points}</td><td>${medal}</td><td>${time}</td></tr>`);
-  } 
-
+    console.log(name, points, medal, time);
+    $(table).append(
+      `<tr><td>${name}</td><td>${points}</td><td>${medal}</td><td>${time}</td></tr>`
+    );
+  }
 }
 
-
-
-function errData(err){
+function errData(err) {
   console.log("Error!");
   console.log(err);
 }
