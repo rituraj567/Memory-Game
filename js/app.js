@@ -601,27 +601,11 @@ function errData(err) {
   console.log(err);
 }
 
-var loadMultipleCss = function(){
-  //load local stylesheet
-  loadCss('./SaiyanSans.css');
-  loadCss('./css/app.css');
-  loadCss('./css/bootstrap.min.css');
-  loadCss('./css/animate.min.css');
-   
-  //load Bootstrap from CDN
-  loadCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
-   
-  //load Bootstrap theme from CDN
-  loadCss('https://fonts.googleapis.com/css?family=Lato');
-}
-
-var loadCss = function(cssPath){
-  var cssLink = document.createElement('link');
-  cssLink.rel = 'stylesheet';
-  cssLink.href = cssPath;
-  var head = document.getElementsByTagName('head')[0];
-  head.parentNode.insertBefore(cssLink, head);
+function loadStyleSheet(src) {
+  if (document.createStyleSheet){
+      document.createStyleSheet(src);
+  }
+  else {
+      $("head").append($("<link rel='stylesheet' href='"+src+"' type='text/css' media='screen' />"));
+  }
 };
-
-//call function on window load
-window.addEventListener('load', loadMultipleCss);
