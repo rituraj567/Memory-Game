@@ -217,6 +217,7 @@ div.length input[type="range"] {
 .deck .card.disabled {
   pointer-events: none;
 }
+
 /*
    * Styles for the Score Panel
    */
@@ -368,6 +369,7 @@ tr:last-child {
   position: relative;
   top: 5em;
 }
+
 /*-----MEDIA QUERIES------*/
 
 @media only screen and (max-width: 980px) {
@@ -686,7 +688,7 @@ tr:last-child {
   }
 
   .medium {
-    width: 16em !important;
+    width: 17em !important;
   }
 
   .hard {
