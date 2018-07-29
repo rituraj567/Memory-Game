@@ -1,5 +1,7 @@
 //Database
-var database;
+$(function() { 
+  /* code here */
+  var database;
 
 function shuffle(array) {
   var currentIndex = array.length,
@@ -601,11 +603,5 @@ function errData(err) {
   console.log(err);
 }
 
-function loadStyleSheet(src) {
-  if (document.createStyleSheet){
-      document.createStyleSheet(src);
-  }
-  else {
-      $("head").append($("<link rel='stylesheet' href='"+src+"' type='text/css' media='screen' />"));
-  }
-};
+
+ });
