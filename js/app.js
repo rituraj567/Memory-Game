@@ -452,7 +452,7 @@ $(function() {
   </p>
   <p class="add-name">Add your name in the leaderboard 🏆 </p>
   <form class="form-inline">
-  <div class="form-group mb-2 mx-3">
+  <div class="form-group mb-2 mr-3">
   <input type="text" class="form-control" id="name" placeholder="Enter your name">
   </div>
   <button type="submit" class="btn btn-success submit mb-2">Submit</button>
