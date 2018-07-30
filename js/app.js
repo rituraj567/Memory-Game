@@ -445,12 +445,12 @@ $(function() {
   </button>
   </div>
   <div class="modal-body">
-  <p>Well done, you got <span class='e'>${medal}</span> medal, you scored a rating of  ${points} stars in ${moves} moves.
+  <p>Well done, you got ${medal} medal, you scored a rating of ${points} stars in ${moves} moves.
   Total time taken ${timer.getTimeValues().hours} hrs 
   ${timer.getTimeValues().minutes} mins 
   ${timer.getTimeValues().seconds} secs
   </p>
-  <p class="add-name">Add your name in the leaderboard <span class="emoji">🏆</span></p>
+  <p class="add-name">Add your name in the leaderboard 🏆 </p>
   <form class="form-inline">
   <div class="form-group mb-2 mr-3">
   <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -474,7 +474,7 @@ $(function() {
         e.preventDefault();
         $(".add-name").addClass("animated fadeIn");
         $(".add-name").text(
-          "Thank you for giving your name <span class='emoji'>✔️</span>, now you can close this or play again to improve your score."
+          "Thank you for giving your name ✔️, now you can close this or play again to improve your score."
         );
         submitScores();
       });
