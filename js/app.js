@@ -445,7 +445,7 @@ $(function() {
   </button>
   </div>
   <div class="modal-body">
-  <p>Well done, you got <span class='emoji'>${medal}</span> medal, you scored a rating of  ${points} stars in ${moves} moves.
+  <p>Well done, you got <span class='e'>${medal}</span> medal, you scored a rating of  ${points} stars in ${moves} moves.
   Total time taken ${timer.getTimeValues().hours} hrs 
   ${timer.getTimeValues().minutes} mins 
   ${timer.getTimeValues().seconds} secs
@@ -592,7 +592,7 @@ $(function() {
       time = scores[k].time;
       console.log(name, points, medal, time);
       $(table).append(
-        `<tr><td>${name}</td><td>${points}</td><td><span class="emoji">${medal}</span></td><td>${time}</td></tr>`
+        `<tr><td>${name}</td><td>${points}</td><td>${medal}</td><td>${time}</td></tr>`
       );
     }
   }
