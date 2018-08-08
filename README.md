@@ -2,11 +2,11 @@
 
 - To view this website visit this link https://rituraj567.github.io/memory-game/
 
-- My 2st project in Udacity frontend developer nanodegree.
+- My 2nd project in Udacity frontend developer nanodegree.
 
 Author
 =========
- It is made by Ritura Kadamati
+ It is made by Rituraj Kadamati
 
  Game Working
  ===========
